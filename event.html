@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <div>
+        <ul id="image">
+            image1:
+            <li id="image1"><img src="./image1.jpeg"></li><br>
+            image2:
+            <li id="image2"><img src="./image2.jpeg"></li><br>
+            image 3:
+            <li id="image3"><img src="./image3.jpeg"></li><br>
+            
+        </ul>
+    </div>
+    <script>
+    
+        // document.getElementById("image").addEventListener('click',function(e){
+        //   console.log("clicked on images") 
+        // },false)
+
+
+        // document.getElementById("image1").addEventListener('click',function(e){
+        //   console.log("clicked on images-1")
+        //   e.stopPropagation()
+          
+        // },false)
+
+        // document.getElementById("image2").addEventListener('click',function(e){
+        //   console.log(e.target)
+        //   e.stopPropagation()
+        // },false)
+
+        document.querySelector("#image").addEventListener('click',function(e){
+          console.log(e.target.parentNode);
+          let removeIt = e.target.parentNode
+          //removeIt.remove()
+          //removeIt.parentNode.removeChild(removeIt)
+        },false)
+
+// we can use prevent e.preventDefault();, e.target.parentNode
+
+
+
+
+
+    
+//    document.getElementById('image1').onclick = function(){
+    //     alert("Page is insert"); }
+
+ // document.getElementById('image1').onclick = window.print();
+        
+
+
+
+//   EventListners object //
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget,
+        // clientX , ctrlkey, shiftkey,screenX, screenY
+        // altkey ,ctrkey , shiftkey, keyCode
+
+
+       
+    </script>
+</body>
+</html>
+
+
+
